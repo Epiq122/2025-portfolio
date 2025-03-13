@@ -3,7 +3,8 @@ import LoadingScreen from './components/loading-screen';
 import { useState, useEffect } from 'react';
 import Navbar from './components/navbar';
 import MobileMenu from './components/mobile-menu';
-
+import Home from './components/sections/home';
+import About from './components/sections/about';
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,6 +31,8 @@ function App() {
         <Navbar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
         {/* Your other content goes here */}
       </div>
+      <Home />
+      <About />
     </>
   );
 }
