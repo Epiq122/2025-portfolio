@@ -1,6 +1,6 @@
 import RevealOnScroll from '../reveal-on-scroll';
 import emailjs from 'emailjs-com';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -8,6 +8,10 @@ const Contact = () => {
     email: '',
     message: '',
   });
+
+  useEffect(() => {
+    emailjs.init(import.meta.env.VITE_PUBLIC_KEY);
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
