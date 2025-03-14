@@ -6,6 +6,7 @@ const About = () => {
     'React',
     'Next.js',
     'Typescript',
+    'Tailwind CSS',
   ];
 
   const backendSkills = [

@@ -5,6 +5,8 @@ import Navbar from './components/navbar';
 import MobileMenu from './components/mobile-menu';
 import Home from './components/sections/home';
 import About from './components/sections/about';
+import Projects from './components/sections/projects';
+
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,6 +35,7 @@ function App() {
       </div>
       <Home />
       <About />
+      <Projects />
     </>
   );
 }
