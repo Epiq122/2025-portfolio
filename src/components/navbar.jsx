@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
   useEffect(() => {
@@ -12,27 +13,8 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
           <a href='#home' className='font-mono text-xl font-bold text-white'>
             robert<span className='text-blue-500'>gleason</span>{' '}
           </a>
-          <button
-            className='w-8 h-8 flex flex-col justify-center items-center md:hidden focus:outline-none'
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label='Toggle menu'
-          >
-            <span
-              className={`w-6 h-0.5 bg-white transition-all duration-300 ${
-                isMenuOpen ? 'rotate-45 translate-y-1' : ''
-              }`}
-            />
-            <span
-              className={`w-6 h-0.5 bg-white transition-all duration-300 mt-1.5 ${
-                isMenuOpen ? 'opacity-0' : ''
-              }`}
-            />
-            <span
-              className={`w-6 h-0.5 bg-white transition-all duration-300 mt-1.5 ${
-                isMenuOpen ? '-rotate-45 -translate-y-2' : ''
-              }`}
-            />
-          </button>
+
+          {/* Desktop Navigation */}
           <div className='hidden md:flex items-center space-x-8'>
             <a
               href='#home'
@@ -58,6 +40,69 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
             >
               Contact
             </a>
+            <div className='flex items-center space-x-4 border-l border-gray-700 pl-4'>
+              <a
+                href='https://github.com/Epiq122'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='text-gray-300 hover:text-white transition-colors text-xl'
+                aria-label='GitHub'
+              >
+                <FaGithub />
+              </a>
+              <a
+                href='https://www.linkedin.com/in/robert-gleason-222b30178/'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='text-gray-300 hover:text-white transition-colors text-xl'
+                aria-label='LinkedIn'
+              >
+                <FaLinkedin />
+              </a>
+            </div>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <div className='md:hidden flex items-center space-x-4'>
+            <a
+              href='https://github.com/Epiq122/product-landing/tree/main'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='text-gray-300 hover:text-white transition-colors text-xl'
+              aria-label='GitHub'
+            >
+              <FaGithub />
+            </a>
+            <a
+              href='https://linkedin.com/in/yourprofile'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='text-gray-300 hover:text-white transition-colors text-xl'
+              aria-label='LinkedIn'
+            >
+              <FaLinkedin />
+            </a>
+            <button
+              className='w-8 h-8 flex flex-col justify-center items-center focus:outline-none'
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label='Toggle menu'
+            >
+              <span
+                className={`w-6 h-0.5 bg-white transition-all duration-300 ${
+                  isMenuOpen ? 'rotate-45 translate-y-1' : ''
+                }`}
+              />
+              <span
+                className={`w-6 h-0.5 bg-white transition-all duration-300 mt-1.5 ${
+                  isMenuOpen ? 'opacity-0' : ''
+                }`}
+              />
+              <span
+                className={`w-6 h-0.5 bg-white transition-all duration-300 mt-1.5 ${
+                  isMenuOpen ? '-rotate-45 -translate-y-2' : ''
+                }`}
+              />
+            </button>
           </div>
         </div>
       </div>

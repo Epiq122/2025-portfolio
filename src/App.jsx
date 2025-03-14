@@ -6,6 +6,8 @@ import MobileMenu from './components/mobile-menu';
 import Home from './components/sections/home';
 import About from './components/sections/about';
 import Projects from './components/sections/projects';
+import Contact from './components/sections/contact';
+import Footer from './components/footer';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -36,6 +38,8 @@ function App() {
       <Home />
       <About />
       <Projects />
+      <Contact />
+      <Footer />
     </>
   );
 }

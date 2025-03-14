@@ -1,3 +1,5 @@
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+
 const MobileMenu = ({ setIsMenuOpen }) => {
   const handleLinkClick = () => {
     setIsMenuOpen(false);
@@ -34,6 +36,28 @@ const MobileMenu = ({ setIsMenuOpen }) => {
         >
           Contact
         </a>
+
+        {/* Social Links */}
+        <div className='menu-item flex items-center space-x-6 mt-8'>
+          <a
+            href='https://github.com/Epiq122/product-landing/tree/main'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='text-gray-300 hover:text-white transition-colors text-3xl hover:scale-110 transform duration-200'
+            aria-label='GitHub'
+          >
+            <FaGithub />
+          </a>
+          <a
+            href='https://linkedin.com/in/yourprofile'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='text-gray-300 hover:text-white transition-colors text-3xl hover:scale-110 transform duration-200'
+            aria-label='LinkedIn'
+          >
+            <FaLinkedin />
+          </a>
+        </div>
       </div>
     </div>
   );
