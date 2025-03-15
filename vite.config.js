@@ -4,5 +4,5 @@ import tailwindcss from '@tailwindcss/vite';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: import.meta.env.VITE_BASE_PATH || '/2025-portfolio/',
+  base: '/2025-portfolio/',
 });
