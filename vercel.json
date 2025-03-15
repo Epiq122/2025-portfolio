@@ -1,6 +1,6 @@
 {
   "buildCommand": "npm install --no-optional && npm run build",
   "framework": "vite",
-  "installCommand": "npm install --no-optional",
-  "nodeVersion": "22.x"
+  "installCommand": "npm install --no-optional"
+
 }
